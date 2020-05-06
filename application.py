@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session, redirect, flash, send_file
+from flask import Flask, render_template, request, session, redirect, flash
 import sys
 import os
 import re
@@ -223,6 +223,6 @@ def logout():
 
 if __name__ == '__main__':
     app.secret_key = 'youcantseeme'
-    # port = int(os.environ.get('PORT', 5000))
-    # app.run(host='0.0.0.0', port=port)
-    app.run(host='0.0.0.0', port=int(sys.argv[1]))
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
+    #app.run(host='0.0.0.0', port=int(sys.argv[1]))
