@@ -1,0 +1,39 @@
+{% extends 'header.html' %} {% block body %}
+<div class="container container3">
+    <header class="jumbotron" style="font-family: 'Montserrat',sans-serif; margin-top:0px !important; background:rgb(255,255,255,0.5) !important;">
+        <div style="width:40%; margin:0px auto;text-align:center;">
+            <h2 style="text-align:center; color:black;">FOOD HELPLINE DASHBOARD</h2>
+            <a class="btn btn-block button1" style=" background: linear-gradient(to right, #00c6ff, #0072ff) !important; display:inline-block; margin-top:5px; width:fit-content; color:black !important; font-size:1.5em;" name="city" href="#">                <span><em class="fas fa-fas fa-map-marker-alt"></em>  {{city}} City</span>
+            </a><br>
+            <a class="btn btn-block button1" style="background: linear-gradient(to right, #56ab2f, #a8e063); !important; display:inline-block; margin-top:5px; width:fit-content; color:black !important; font-size:1.5em;" name="prev" href="/prev">                  Previous Orders
+            </a>
+        </div>
+    </header>
+</div>
+
+
+<div class="well" style="margin-left:30px;color:white;
+background: linear-gradient(to right, #870000, #190a05);
+border-radius:3%;">
+    <h3 style="font-family: 'Bellota', cursive;color:white;text-align:center;">
+        FOOD ORDERS
+    </h3>
+    <hr> {% for order in orders %}
+    <div class="row">
+        <div class="col-md-12">
+
+            <strong>Customer: </strong>{{order["name"]}}
+            <span class="pull-right" style="color:white;">{{order["date"]}}</span><br>
+            <strong>Address: </strong>{{order["address"]}}<br>
+            <strong>Order: </strong>{{order["order"]}}<br>
+            <form class="delete-form" action="/staff" method=POST>
+                <input type="hidden" name="order" value="{{order['name']}}">
+                <input type="submit" class="btn btn-sm btn-warning" style="background: linear-gradient(to right, #e65c00, #f9d423)!important; color:black !important;" name="delete" value="CONFORM ORDER">
+            </form>
+        </div>
+    </div>
+    <hr> {% endfor %}
+</div>
+<br>
+<br>
+<br> {%endblock%}

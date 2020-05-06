@@ -1,0 +1,197 @@
+html {
+    min-height: 100%;
+}
+body {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+body {
+    /* background: url('https://www.jakpost.travel/imgfiles/full/54/540654/sharp-wallpaper.jpg')
+        no-repeat center; */
+    background: url('https://www.aneekah.com/wp-content/uploads/2016/03/Ingredients.jpg')
+        no-repeat center;
+    margin: 0;
+    background-position: center center;
+    background-blend-mode: color;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #000;
+    transition: all 0.5s;
+}
+
+.container1 {
+    background: transparent;
+    padding-top: 25px;
+}
+
+.container2 {
+    background: transparent;
+    padding-top: 15px;
+}
+
+.container3 .jumbotron {
+    background: rgb(255, 255, 255, 0.5);
+    margin-top: 100px;
+    padding-top: 15px;
+}
+
+.nav1 {
+    background: linear-gradient(to right, #434343, #000000);
+    color: white;
+    border: 0px;
+}
+
+.nav1 .navbar-brand {
+    font-size: 2em;
+    padding-top: 10px;
+    color: white;
+}
+
+.nav1 .nav li a {
+    color: white;
+}
+
+button {
+    display: inline-block;
+    border-radius: 4px;
+    position: relative;
+    background-color: #f4511e;
+    border: none;
+    font-size: 28px;
+    color: #ffffff;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: all 0.5s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button1 {
+    background: linear-gradient(to right, #159957, #155799);
+    color: white;
+}
+
+.button1:hover {
+    background: linear-gradient(to right, #c31432, #240b36);
+    color: white;
+}
+
+.button2 {
+    background: linear-gradient(to right, #52c234, #061700);
+    color: white;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+}
+
+.button2:hover {
+    background: linear-gradient(to right, #000000, #0f9b0f); 
+    color: white;
+}
+
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+button:hover span {
+    padding-right: 25px;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+button:after {
+    content: '';
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+.col-sm-4 i {
+    height: 20px;
+}
+
+table tr td:hover {
+background: linear-gradient(to right, #240b36, #c31432) !important;  
+
+}
+
+.tabl {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+    color:white;
+    border: 1px solid #ccc;
+}
+
+
+.tabl tr:nth-child(odd) {
+    background: linear-gradient(to right, #0575E6, #00F260); 
+}
+.tab tr:nth-child(even) {
+    background: linear-gradient(to right, #1F1C18, #8E0E00);
+}
+.tab tr td:hover, {
+
+    background: linear-gradient(to right, #ffff1c, #00c3ff);
+}
+.tab tr th,
+.tab tr td {
+    text-align: center;
+}
+.tab td,
+.tab th,
+.tab td,
+.tab th {
+    padding: 8px 8px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+}
+.tab th:first-child,
+.tab td:first-child,
+.tab th:first-child,
+.tab td:first-child {
+    padding-left: 16px;
+}
+
+ .logo-image{
+    width: 150px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}

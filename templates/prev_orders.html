@@ -1,0 +1,38 @@
+{% extends 'header.html' %} {% block body %}
+<div class="container container3" style="text-align:center !important";>
+     <a class="btn btn-block button1" style="background: linear-gradient(to right, #56ab2f, #a8e063);!important; display:inline-block; float:left; width:fit-content;margin-left:115px; color:black !important; font-size:1.5em;" name="goback" href="/staff">
+        <span style="float:left"><em class="fas fa-arrow-circle-left"></em></span>
+    </a>
+    <a class="btn btn-block button1" style="background: linear-gradient(to right, #e65c00, #f9d423);!important; display:inline-block; margin-top:5px; width:fit-content; color:black !important; font-size:1.5em;" name="city" href="#">
+        <span>
+            <em class="fas fa-fas fa-map-marker-alt"></em> {{city}} City</span>
+    </a>
+    <div style="width:80%; margin:0px auto;">
+        {% if not prev_orders %}
+        <h3 style="text-align:center; color:white;font-family: 'Sen', sans-serif;">No Previous Orders</h3>
+        {% endif %} {% if prev_orders%}
+        <h2 style="text-align:center;color:white;font-family: 'Sen', sans-serif;margin-top:50px;">Previous Orders</h2>
+
+        <table style="width: 100%;
+                           display: table;
+                           color:white;
+                           border: 1px solid black;border-radius:50% !important;">
+
+            <tr style="background: linear-gradient(to right, #000000, #434343);">
+                <th style=" text-align: center;padding: 8px 8px;display: table-cell;vertical-align: top;">Date</th>
+                <th style=" text-align: center;padding: 8px 8px;display: table-cell;vertical-align: top;">Customer Name</th>
+                <th style=" text-align: center;padding: 8px 8px;display: table-cell;vertical-align: top;">Address</th>
+                <th style=" text-align: center;padding: 8px 8px;display: table-cell;vertical-align: top;">Order Details</th>
+            </tr>
+            {% for i in prev_orders %}
+            <tr style="background: linear-gradient(to right, #000000, #0f9b0f); ">
+                <td style=" text-align: center;padding: 8px 8px;display: table-cell;vertical-align: top;">{{i["date"]}}</td>
+                <td style=" text-align: center;padding: 8px 8px;display: table-cell;vertical-align: top;">{{i["name"]}}</td>
+                <td style=" text-align: center;padding: 8px 8px;display: table-cell;vertical-align: top;">{{i["address"]}}</td>
+                <td style=" text-align: center;padding: 8px 8px;display: table-cell;vertical-align: top;">{{i["order"]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    </div>
+    {% endblock %}

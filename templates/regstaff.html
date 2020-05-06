@@ -1,0 +1,65 @@
+{% extends 'header.html' %} {% block body %}
+
+<div class="container container2">
+    <div class="row">
+        {% if not session.logged_in %}
+        <h2 style="text-align:center; color:white">REGISTER</h2>
+        <h4 style="text-align:center; color:white">AS STAFF</h4>
+        <div style="width:30%; margin:25px auto;">
+            <form action="/regstaff" method="POST">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <em class="fas fa-id-badge"></em>
+                        </span>
+                        <input class="form-control" type="text" name="staffid" placeholder="staffid" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <em class="fas fa-user"></em>
+                        </span>
+                        <input class="form-control" type="text" name="username" placeholder="username" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <em class="fas fa-lock"></em>
+                        </span>
+                        <input class="form-control" type="password" name="password" placeholder="password" required minlength="6" maxlength="20" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <em class="fas fa-envelope"></em>
+                        </span>
+                        <input class="form-control" type="email" name="email" placeholder="Enter a vaild Email address" required minlength="6" maxlength="40">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <em class="fas fa-city"></em>
+                        </span>
+                        <input class="form-control" type="text" name="city" placeholder="city" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-block button1" required>
+                        <span>Submit</span>
+                    </button>
+                </div>
+            </form>
+            <a class="btn btn-block button1" style="background: linear-gradient(to right, #56ab2f, #a8e063);!important; display:inline-block; float:left; width:fit-content; color:black !important; font-size:1.5em;" name="goback" href="/register">
+                <span style="float:left">
+                    <em class="fas fa-arrow-circle-left"></em>
+                </span>
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

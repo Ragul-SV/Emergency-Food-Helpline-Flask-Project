@@ -1,0 +1,21 @@
+{% extends 'header.html' %} {% block body %}
+<div class="container container3">
+    <header class="jumbotron">
+        <div class="row">
+            <div class="col-sm-4">
+                <!-- <em class="fab fa-gofore" style="font-size: 12em; padding-left:55px; padding-top:18px;"></em> -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Rise-Against-Hunger-Logo.png" alt="Smiley face" style="width:320px;height:150px;margin-top:50px;margin-left:0px;">
+            </div>
+            <div class="col-sm-8">
+                <h1>Welcome to Emergency Food Helpline</h1>
+                <p>Helping Fight Hunger. Hunger doesn't have to exist — let's end it together!!</p>
+                {% if not session.logged_in %}
+                <a class="btn btn-lg button1" href="/login" id="gotologin">
+                    <span>Go to Login Page</span>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+</div>
+{% endblock %}

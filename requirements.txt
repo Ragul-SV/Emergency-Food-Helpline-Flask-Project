@@ -1,0 +1,8 @@
+flask
+pymongo
+flask_bcrypt
+datetime
+pandas
+numpy
+dnspython
+urllib

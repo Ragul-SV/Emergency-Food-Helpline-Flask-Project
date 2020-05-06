@@ -1,0 +1,38 @@
+<nav class="nav1 navbar navbar-default ">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/home">
+                <span>
+                    <em class="fas fa-hands-helping"></em>
+                </span>Emergency Food Helpline</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                {% if session.logged_in %}
+                <li>
+                    <a href='#'>Signed in as {{session['username']}}</a>
+                </li>
+                {% if session['type']=='Customer' %}
+                <li>
+                    <a href="/customer" id="dashboard">Dashboard</a>
+                </li>
+                {% else %}
+                <li>
+                    <a href="/staff" id="dashboard">Dashboard</a>
+                </li>
+                {% endif %}
+                <li>
+                    <a href="/logout" id="logout">Logout</a>
+                </li>
+                {% else %}
+                <li>
+                    <a href="/register" id="register">Register</a>
+                </li>
+                <li>
+                    <a href="/login" id="register">Login</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

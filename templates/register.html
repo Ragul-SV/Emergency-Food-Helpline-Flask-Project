@@ -1,0 +1,21 @@
+{% extends 'header.html' %} {% block body %}
+<div class="container container1">
+    <div class="row">
+        {% if not session.logged_in %}
+        <h2 style="text-align:center; color:white;">REGISTER</h2>
+        <div style="width:80%; margin:50px auto; ">
+            <div class="inline-block" style="text-align:center;">
+                <div>
+                    <a href="/regcust" name="regcust">
+                        <img border="0" class="inline-block" src="https://i.ibb.co/rMBFtDz/circle-cropped-1.png" width="250" height="250" alt='Customer'>
+                    </a>
+                    <a href="/regstaff" name="regstaff">
+                        <img border="0" class="float-right" src="https://cdn1.iconfinder.com/data/icons/business-and-office-7-2/128/328-512.png" width="250" height="250" alt="Staff">
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'header.html' %} {% block body %}
+
+<div style="width:40%; margin:0px auto;text-align:center;">
+    <a class="btn btn-block button1" style="background: rgb(255, 255, 255, 0.5); !important; display:inline-block; margin-top:5px; width:fit-content; color:black !important; font-size:1.75em;" name="hotlines" href="/hotlines">Click Here for Contacts
+        <span>
+            <em class="far fa-hand-point-down"></em>
+        </span>
+        <span>
+            <em class="far fa-hand-point-down"></em>
+        </span>
+    </a>
+    <a class="btn btn-block button1" style="background: linear-gradient(to right, #e65c00, #f9d423); !important; display:inline-block; margin-top:5px; width:fit-content; color:black !important; font-size:2em;" name="hotlines" href="/hotline">
+        <span>
+            <em class="fas fa-headphones"></em>
+        </span>24/7 Hunger Hotlines
+        <span>
+            <em class="fas fa-exclamation-triangle"></em>
+        </span>
+    </a>
+</div>
+<br>
+<br>
+<br>
+<div class="well" style="background: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);
+border-radius:3%;
+font-family: 'Bellota', cursive;
+background-size: cover;background-repeat:no-repeat;width:90%;margin:0 auto;height:auto;align:center;">
+    <div class="row">
+        <div class="col-lg-5">
+            <div style="padding-left:90px;padding-top:40px;margin:auto;">
+                <h1 style="text-align:center; color:black;"><strong>ORDER FOOD</strong></h1>
+                <span><em style="font-size:3.5em;margin-left:40px;" class="fas fa-utensils"></em><em style="font-size:3.5em;margin-left:40px;" class="fas fa-hamburger"></em><em style="font-size:3.5em;margin-left:40px;" class="fas fa-bread-slice"></em></span>
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <form class="form-horizontal" action='/customer' method='POST'>
+                <div style="width:60%; margin:25px auto;">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <em class="fas fa-city"></em>
+                            </span>
+                            <input class="form-control" type="text" name="city" placeholder="Enter your city" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <em class="fas fa-fas fa-map-marker-alt"></em>
+                            </span>
+                            <input class="form-control" type="text" name="address" placeholder="address" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <em class="fas fa-utensils"></em>
+                            </span>
+                            <input class="form-control" type="text" name="order" placeholder="order" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-block button1">
+                            <span>Send Comment</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

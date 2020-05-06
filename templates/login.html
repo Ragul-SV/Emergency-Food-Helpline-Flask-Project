@@ -1,0 +1,42 @@
+{% extends 'header.html' %} {% block body %}
+<div class="container container1">
+    <div class="row" style="margin-top:80px">
+        {% if not session.logged_in %}
+        <h2 style="text-align:center; color:white;">LOGIN</h2>
+        <div style="width:30%; margin:25px auto;">
+            <form action="/login" method="POST" class="form-horizontal">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <em class="fas fa-user"></em>
+                        </span>
+                        <input class="form-control" type="text" name="username" id="username" placeholder="username" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <em class="fas fa-lock"></em>
+                        </span>
+                        <input class="form-control" type="password" name="password" placeholder="password" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-block button1" id="loginsubmit">
+                        <span>Submit</span>
+                    </button>
+                </div>
+            </form>
+            {% endif %}
+            <!-- <a class="btn btn-block button2" style="display:inline-block; margin-top:0px;" href="/home">
+                <span>Go Back</span>
+            </a> -->
+            <a class="btn btn-block button1" style="background: linear-gradient(to right, #56ab2f, #a8e063);!important; display:inline-block; float:left; width:fit-content; color:black !important; font-size:1.5em;" name="goback" href="/home">
+                <span>
+                    <em class="fas fa-arrow-circle-left"></em>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
